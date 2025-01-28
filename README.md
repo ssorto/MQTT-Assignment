@@ -27,8 +27,8 @@ source venv/bin/activate  # For macOS/Linux
 pip install paho-mqtt python-dotenv google-generativeai
 
 # Step 4: Create a .env file to store the Gemini API key
-# Open a text editor and save the following line as a file named .env in the project directory:
-# GEMINI_API_KEY=your_gemini_api_key
+Open a text editor and save the following line as a file named .env in the project directory:
+GEMINI_API_KEY=your_gemini_api_key
 
 # Step 5: Verify that the libraries are installed
 pip list  # Check if paho-mqtt, python-dotenv, and google-generativeai are listed

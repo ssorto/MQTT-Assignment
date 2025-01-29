@@ -2,6 +2,9 @@
 
 This project demonstrates a real-time collaborative team dashboard using MQTT for task updates and Google Gemini API for motivational and collaboration insights. The **publisher** sends task updates, while the **subscriber** displays the team dashboard and generates actionable suggestions for improving teamwork and motivation.
 
+Additionally, a standalone LLM test script is included to verify integration of Google Gemini API independently of the MQTT system.
+The output of this script explains what MQTT is and its key features.
+
 ---
 
 ## Setup and Installation Instructions
@@ -32,7 +35,28 @@ GEMINI_API_KEY=your_gemini_api_key
 
 ---
 
-# Example Usage of MQTT Script and LLM Interaction
+## Standalone LLM Test (`test_llm.py`)
+
+This script allows you to verify that the LLM integration is working independently of MQTT.
+
+#### Open a terminal and run:
+python mqtt_project/test_llm.py
+
+### LLM Test Output ###
+MQTT (Message Queuing Telemetry Transport) is a lightweight, publish-subscribe network protocol designed for machine-to-machine (M2M) communication and Internet of Things (IoT) applications.  It's especially well-suited for situations with limited bandwidth, unreliable networks, or a large number of devices.
+
+**Key Features:**
+
+* **Lightweight:**  It has a small footprint, making it ideal for resource-constrained devices like sensors and actuators.
+* **Publish-Subscribe:**  Devices publish messages to topics, and other devices subscribe to those topics to receive messages. This decoupling makes the system flexible and scalable.
+* **Asynchronous:**  Messages are sent asynchronously, meaning the publisher doesn't need to wait for a response from the subscriber. This improves efficiency and reliability.
+* **Efficient:**  It uses a small amount of bandwidth and processing power, making it suitable for low-power devices.
+* **Reliable:**  While it can operate in unreliable networks, it offers Quality of Service (QoS) levels to control message delivery reliability.
+* **Simple:**  The protocol is relatively easy to understand and implement.
+  
+---
+
+# Example Usage of Team Dashboard MQTT Script and LLM Interaction
 
 ### Start the Subscriber Script
 #### Open a terminal and run:
